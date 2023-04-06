@@ -1,0 +1,1 @@
+enum OrderStatus {onItsWay,delivered,notDelivered,discards}
