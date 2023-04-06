@@ -18,7 +18,7 @@ class SummaryList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const[
-            ListItemWidget(title: "اجمالي قيمة العهدة", value: 455,useFractions: true),
+            ListItemWidget(title: "اجمالي قيمة العهده", value: 455,useFractions: true),
              ListItemWidget(title: "المحصل نقداً", value: 280,useFractions: true,),
           ],
         ),

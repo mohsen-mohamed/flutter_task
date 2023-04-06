@@ -14,7 +14,7 @@ class ListItemWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title,style: const TextStyle(color: Colors.white,fontSize: 13,fontWeight: FontWeight.w500),),
+          Text(title,style: const TextStyle(fontSize: 13,fontWeight: FontWeight.w500),),
           Text(value.toStringAsFixed(useFractions == true ? 2 : 0),style: const TextStyle(color: AppTheme.defaultColor,fontSize: 13,fontWeight: FontWeight.w500),),
         ],
       ),
