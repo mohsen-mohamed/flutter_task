@@ -7,6 +7,8 @@ class AccountPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(runtimeType.toString()),);
+    return Scaffold(
+      body: Center(child: Text(runtimeType.toString()),),
+    );
   }
 }

@@ -23,7 +23,7 @@ class CustodyList extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 8),
             child: Column(
-              children: [
+              children: const [
                 ListItemWidget(title: "اجمالي الشحنات", value: 30),
                 ListItemWidget(title: "تم التسليم", value: 3),
                 ListItemWidget(title: "لم يتم التسليم", value: 5),

@@ -1,4 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_task/core/navigation/app_router.gr.dart';
+import 'package:flutter_task/core/utils/enums.dart';
 import 'package:flutter_task/pages/home/widgets/status_grid_item.dart';
 
 class StatusGrid extends StatelessWidget {
@@ -23,7 +26,9 @@ class StatusGrid extends StatelessWidget {
         StatusGridItem(
           icon: const Icon(Icons.done_all, size: 35, color: Colors.greenAccent),
           title: "تم التسليم",
-          onTab: () {},
+          onTab: () {
+            context.router.push(StatusRoute(status: OrderStatus.delivered));
+          },
         ),
         StatusGridItem(
           icon: const Icon(Icons.pin_drop, size: 35, color: Colors.orangeAccent),
@@ -33,9 +38,7 @@ class StatusGrid extends StatelessWidget {
         StatusGridItem(
           icon: const Icon(Icons.cancel, size: 35, color: Colors.red),
           title: "مرتجع",
-          onTab: () {
-            print("sdgfdsgsdf");
-          },
+          onTab: () {},
         ),
       ],
     );

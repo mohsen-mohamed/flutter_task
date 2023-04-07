@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../core/theme/theme.dart';
 
 class ListTileButtonWidget extends StatelessWidget {
-  const ListTileButtonWidget({required this.icon, required this.title, this.percentage, Key? key}) : super(key: key);
+  const ListTileButtonWidget({required this.icon, required this.title, this.percentage,this.onTab, Key? key}) : super(key: key);
 
   final Widget icon;
   final String title;
   final String? percentage;
+  final VoidCallback? onTab;
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
+      onTap: onTab,
       contentPadding: const EdgeInsets.symmetric(horizontal: 34, vertical: 15),
       tileColor: AppTheme.appGreyColor,
       dense: true,
