@@ -62,10 +62,14 @@ class NavBarPage extends StatelessWidget {
           // unselectedItemColor: Colors.blue,
           showUnselectedLabels: true,
           items: [
-            BottomNavigationBarItem(icon: const Icon(Icons.home_rounded), label: _titles[0]),
-            BottomNavigationBarItem(icon: const Icon(Icons.search_rounded), label: _titles[1]),
-            BottomNavigationBarItem(icon: const Icon(Icons.school_rounded), label: _titles[2]),
-            BottomNavigationBarItem(icon: const Icon(Icons.person), label: _titles[3]),
+            BottomNavigationBarItem(icon: const Icon(Icons.home_filled,size: 25,), label: _titles[0]),
+            // BottomNavigationBarItem(icon: Image.asset("assets/images/home.png",color: Color(0xffC8D1E1),width: 20,height: 20,),activeIcon: Image.asset("assets/images/home.png",width: 20,height: 20,), label: _titles[0]),
+            // BottomNavigationBarItem(icon: const Icon(Icons.backpack), label: _titles[1]),
+            BottomNavigationBarItem(icon: Image.asset("assets/images/receive.png",width: 20,height: 20,),activeIcon: Image.asset("assets/images/receive.png",color: Colors.blue,width: 20,height: 20,), label: _titles[1]),
+            // BottomNavigationBarItem(icon: const Icon(Icons.calculate_rounded), label: _titles[2]),
+            BottomNavigationBarItem(icon: Image.asset("assets/images/calc.png",width: 20,height: 20,),activeIcon: Image.asset("assets/images/calc.png",color: Colors.blue,width: 20,height: 20,), label: _titles[2]),
+            // BottomNavigationBarItem(icon: const Icon(Icons.person), label: _titles[3]),
+            BottomNavigationBarItem(icon: Image.asset("assets/images/account.png",width: 20,height: 20,),activeIcon: Image.asset("assets/images/account.png",color: Colors.blue,width: 20,height: 20,), label: _titles[3]),
           ],
         );
       },

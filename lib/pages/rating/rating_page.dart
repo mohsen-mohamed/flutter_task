@@ -50,7 +50,6 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
                       title: "تقييمات التجار",
                       color: _selectedColor(0),
                       onTab: () => setState(() {
-                        _tabController.index = 0;
                         _tabController.animateTo(0);
                       }),
                     ),
@@ -58,7 +57,6 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
                       title: "تقييمات العملاء",
                       color: _selectedColor(1),
                       onTab: () => setState(() {
-                        _tabController.index = 1;
                         _tabController.animateTo(1);
                       }),
                     ),
@@ -66,7 +64,6 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
                       title: "مرجعات المستخدمين",
                       color: _selectedColor(2),
                       onTab: () => setState(() {
-                        _tabController.index = 2;
                         _tabController.animateTo(2);
                       }),
                     ),
@@ -79,7 +76,6 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
                 overlayColor: MaterialStateProperty.all(Theme.of(context).scaffoldBackgroundColor),
                 splashFactory: NoSplash.splashFactory,
                 onTap: (index) => setState(() {
-                  _tabController.index = index;
                   _tabController.animateTo(index);
                 }),
                 tabs: const [

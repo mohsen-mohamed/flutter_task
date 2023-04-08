@@ -27,18 +27,25 @@ class HomePage extends StatelessWidget {
           SizedBox(height: _height),
           ListTileButtonWidget(
             title: "تقييمات التجار والعملاء",
-            icon: const Icon(Icons.star_border_purple500_rounded, size: 30, color: AppTheme.defaultColor),
+            icon: Badge(
+              label: const Text("3", style: TextStyle(color: Colors.white), textAlign: TextAlign.center),
+              alignment: AlignmentDirectional.topStart,
+              backgroundColor: Colors.red,
+              child: Image.asset("assets/images/star.png",width: 35,height: 35,),
+              // child: Icon(Icons.star_rate_rounded, size: 45, color: AppTheme.defaultColor),assets/images/star.png
+            ),
             percentage: "80",
             onTab: () => context.router.push(const RatingRoute()),
           ),
           SizedBox(height: _height),
-          const ListTileButtonWidget(
+          ListTileButtonWidget(
             title: "استلام الشحنات",
-            icon: Icon(
-              Icons.qr_code_2,
-              size: 30,
-              color: AppTheme.defaultColor,
-            ),
+            icon: Image.asset("assets/images/barcode.png",width: 35,height: 35,),
+            // Icon(
+            //   Icons.qr_code_2,
+            //   size: 30,
+            //   color: AppTheme.defaultColor,
+            // ),
           ),
         ],
       ),

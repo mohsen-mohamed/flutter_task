@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_task/data/fake_data_source.dart';
 import 'package:flutter_task/pages/status/status_summary_list_item.dart';
 
 import '../../core/utils/enums.dart';
@@ -34,9 +35,9 @@ class StatusPage extends StatelessWidget {
       ),
       body: ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 34),
-        itemCount: 3,
+        itemCount: FakeDataSource.ratingList.length,
         separatorBuilder: (_, __) => const SizedBox(height: 13),
-        itemBuilder: (context, index) => const StatusSummaryListItem(),
+        itemBuilder: (context, index) => StatusSummaryListItem(statusModel: FakeDataSource.ratingList[index]),
       ),
     );
   }

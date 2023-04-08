@@ -19,24 +19,28 @@ class StatusGrid extends StatelessWidget {
       primary: false,
       children: [
         StatusGridItem(
-          icon: const Icon(Icons.delivery_dining, size: 35,color: Colors.blue),
+          // icon: const Icon(Icons.delivery_dining, size: 35,color: Colors.blue),
+          icon: Image.asset("assets/images/deliv.png",width: 35,height: 35,),
           title: "قيد التواصل",
           onTab: () {},
         ),
         StatusGridItem(
-          icon: const Icon(Icons.done_all, size: 35, color: Colors.greenAccent),
+          // icon: const Icon(Icons.done_all, size: 35, color: Colors.greenAccent),
+          icon: Image.asset("assets/images/done.png",width: 35,height: 35,),
           title: "تم التسليم",
           onTab: () {
             context.router.push(StatusRoute(status: OrderStatus.delivered));
           },
         ),
         StatusGridItem(
-          icon: const Icon(Icons.pin_drop, size: 35, color: Colors.orangeAccent),
+          // icon: const Icon(Icons.pin_drop, size: 35, color: Colors.orangeAccent),
+          icon: Image.asset("assets/images/notdeliv.png",width: 35,height: 35,),
           title: "لم يتم التسليم",
           onTab: () {},
         ),
         StatusGridItem(
-          icon: const Icon(Icons.cancel, size: 35, color: Colors.red),
+          // icon: const Icon(Icons.cancel, size: 35, color: Colors.red),
+          icon: Image.asset("assets/images/back.png",width: 35,height: 35,),
           title: "مرتجع",
           onTab: () {},
         ),

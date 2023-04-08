@@ -22,42 +22,69 @@ class _UserRatingCardState extends State<UserRatingCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-            child: Text("تقييم الندوب",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            child: Text(
+              "تقييم الندوب",
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+            ),
           ),
-          const Divider(thickness: .3,color: Color(0xff969696),),
+          const Divider(
+            thickness: .3,
+            color: Color(0xff969696),
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const RatingStarsWidget(starsCount: 5,percentage: 70,),
-                const RatingStarsWidget(starsCount: 1,percentage: 50,),
+                const RatingStarsWidget(
+                  starsCount: 5,
+                  percentage: 70,
+                ),
+                const RatingStarsWidget(
+                  starsCount: 1,
+                  percentage: 50,
+                ),
                 const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Column(children: const [
-                      Icon(Icons.tag_faces,size: 35,color: Colors.green,),
-                      SizedBox(height: 5),
-                      Text("راضي",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: Colors.green),),
-                      SizedBox(height: 5),
-                      Text("70%",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500),),
-
-                    ],),
+                    Column(
+                      children: [
+                        // Icon(Icons.tag_faces,size: 35,color: Colors.green,),
+                        Image.asset("assets/images/face_smile.png", width: 35, height: 25),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "راضي",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.green),
+                        ),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "70%",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                     const SizedBox(width: 50),
-                    Column(children: const [
-                      Icon(Icons.tag_faces,size: 35,color: Colors.red,),
-                      SizedBox(height: 5),
-                      Text("غير راضي",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: Colors.red),),
-                      SizedBox(height: 5),
-                      Text("50%",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500),),
-
-                    ],),
+                    Column(
+                      children: [
+                        // Icon(Icons.tag_faces,size: 35,color: Colors.red,),
+                        Image.asset("assets/images/angry_face.png", width: 35, height: 25),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "غير راضي",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.red),
+                        ),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "50%",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
-
               ],
             ),
           ),
