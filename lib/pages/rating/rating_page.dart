@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_task/core/theme/theme.dart';
-import 'package:flutter_task/pages/rating/tabs/tab_button.dart';
+import 'package:flutter_task/pages/rating/widgets/tab_button.dart';
 
 import 'tabs/customers_tab.dart';
 import 'tabs/merchant_tab.dart';
@@ -41,34 +41,37 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TabButton(
-                    title: "تقييمات التجار",
-                    color: _selectedColor(0),
-                    onTab: () => setState(() {
-                      _tabController.index = 0;
-                      _tabController.animateTo(0);
-                    }),
-                  ),
-                  TabButton(
-                    title: "تقييمات العملاء",
-                    color: _selectedColor(1),
-                    onTab: () => setState(() {
-                      _tabController.index = 1;
-                      _tabController.animateTo(1);
-                    }),
-                  ),
-                  TabButton(
-                    title: "مرجعات المستخدمين",
-                    color: _selectedColor(2),
-                    onTab: () => setState(() {
-                      _tabController.index = 2;
-                      _tabController.animateTo(2);
-                    }),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TabButton(
+                      title: "تقييمات التجار",
+                      color: _selectedColor(0),
+                      onTab: () => setState(() {
+                        _tabController.index = 0;
+                        _tabController.animateTo(0);
+                      }),
+                    ),
+                    TabButton(
+                      title: "تقييمات العملاء",
+                      color: _selectedColor(1),
+                      onTab: () => setState(() {
+                        _tabController.index = 1;
+                        _tabController.animateTo(1);
+                      }),
+                    ),
+                    TabButton(
+                      title: "مرجعات المستخدمين",
+                      color: _selectedColor(2),
+                      onTab: () => setState(() {
+                        _tabController.index = 2;
+                        _tabController.animateTo(2);
+                      }),
+                    ),
+                  ],
+                ),
               ),
               TabBar(
                 controller: _tabController,
@@ -88,6 +91,7 @@ class _RatingPageState extends State<RatingPage> with TickerProviderStateMixin {
               Expanded(
                 child: TabBarView(
                   controller: _tabController,
+                  physics: const NeverScrollableScrollPhysics(),
                   children: const [
                     MerchantTab(),
                     CustomersTab(),

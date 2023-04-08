@@ -12,6 +12,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   auto_route: ^6.0.5
+  flutter_rating_bar: ^4.0.1
+  percent_indicator: ^4.2.3
 
   cupertino_icons: ^1.0.2
 

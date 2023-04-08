@@ -24,20 +24,20 @@ class StatusSummaryListItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("الاسم : خالد طايع",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
+                const Text("الاسم : خالد طايع",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
                 const SizedBox(height: 10),
-                Text("العنوان : ميدان صلاح الدين شارع المنشيه",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
+                const Text("العنوان : ميدان صلاح الدين شارع المنشيه",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                 Row(
-                  children: [
+                  children: const [
                     Text("المبلغ المستلم : ",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
                     Text("280.00",style: TextStyle(color: Color(0xff34D399), fontSize: 12,fontWeight: FontWeight.w600)),
                   ],
                 ),
-                    IconButton(onPressed: (){}, icon: Icon(Icons.call,color: Colors.greenAccent,size: 15,))
+                    IconButton(onPressed: (){}, icon: const Icon(Icons.call,color: Colors.greenAccent,size: 15,))
 
                   ],
                 ),
