@@ -1,10 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_task/core/navigation/app_router.gr.dart';
+import 'package:flutter_task/data/fake_data_source.dart';
 import 'package:flutter_task/pages/home/widgets/custody_list.dart';
 import 'package:flutter_task/pages/home/widgets/status_grid.dart';
-
-import '../../core/theme/theme.dart';
 import 'widgets/list_tile_button_widget.dart';
 import 'widgets/summary_list.dart';
 
@@ -28,7 +27,7 @@ class HomePage extends StatelessWidget {
           ListTileButtonWidget(
             title: "تقييمات التجار والعملاء",
             icon: Badge(
-              label: const Text("3", style: TextStyle(color: Colors.white), textAlign: TextAlign.center),
+              label: Text(FakeDataSource.merchantRatingList.length.toString(), style: TextStyle(color: Colors.white), textAlign: TextAlign.center),
               alignment: AlignmentDirectional.topStart,
               backgroundColor: Colors.red,
               child: Image.asset("assets/images/star.png",width: 35,height: 35,),
