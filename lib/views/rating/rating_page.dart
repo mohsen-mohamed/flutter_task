@@ -1,11 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_task/core/theme/theme.dart';
-import 'package:flutter_task/pages/rating/widgets/tab_button.dart';
-
+import 'package:flutter_task/views/home/home_page.dart';
 import 'tabs/customers_tab.dart';
 import 'tabs/merchant_tab.dart';
 import 'tabs/users_tab.dart';
+import 'widgets/tab_button.dart';
+
+final ratingFutureProvider = FutureProvider((ref) async => await ref.read(ratingViewModelProvider).initialLoading());
 
 @RoutePage()
 class RatingPage extends StatefulWidget {

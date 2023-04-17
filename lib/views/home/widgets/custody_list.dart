@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task/core/theme/theme.dart';
-import 'package:flutter_task/pages/home/widgets/list_item_widget.dart';
+import 'list_item_widget.dart';
 
 class CustodyList extends StatelessWidget {
   const CustodyList({Key? key}) : super(key: key);

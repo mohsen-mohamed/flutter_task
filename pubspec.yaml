@@ -14,6 +14,7 @@ dependencies:
   auto_route: ^6.0.5
   flutter_rating_bar: ^4.0.1
   percent_indicator: ^4.2.3
+  flutter_riverpod: ^2.3.4
 
   cupertino_icons: ^1.0.2
 
@@ -23,6 +24,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   auto_route_generator: ^6.0.3
   build_runner: ^2.3.3
+  riverpod_lint: ^1.1.5
 
 flutter:
 

@@ -2,7 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_task/core/navigation/app_router.gr.dart';
 import 'package:flutter_task/core/utils/enums.dart';
-import 'package:flutter_task/pages/home/widgets/status_grid_item.dart';
+
+import 'status_grid_item.dart';
 
 class StatusGrid extends StatelessWidget {
   const StatusGrid({Key? key}) : super(key: key);

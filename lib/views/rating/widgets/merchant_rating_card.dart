@@ -5,9 +5,11 @@ import 'package:flutter_task/models/rating_model.dart';
 import '../../../core/theme/theme.dart';
 
 class MerchantRatingCard extends StatefulWidget {
-  const MerchantRatingCard({required this.ratingModel, Key? key}) : super(key: key);
+  const MerchantRatingCard({required this.ratingModel, required this.onUsefulTab, required this.isLoading, Key? key}) : super(key: key);
 
   final RatingModel ratingModel;
+  final VoidCallback onUsefulTab;
+  final bool isLoading;
   @override
   State<MerchantRatingCard> createState() => _MerchantRatingCardState();
 }
@@ -99,18 +101,21 @@ class _MerchantRatingCardState extends State<MerchantRatingCard> {
                       )
                     ],
                   ),
-                if (!_newModel.useful)
+                if (_newModel.useful == false && widget.isLoading == false)
                   ElevatedButton(
                       onPressed: () {
-                        setState(() {
-                         _newModel = _newModel.copyWith(useful: true);
-                        });
+                        widget.onUsefulTab.call();
+                        // setState(() {
+                        //  _newModel = _newModel.copyWith(useful: true);
+                        // }
+                        // );
                       },
                       style: ButtonStyle(shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(7))), backgroundColor: MaterialStateProperty.all(const Color(0xff3B3F49))),
                       child: const Text(
                         "مفيد",
                         style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400, color: AppTheme.defaultColor),
-                      ))
+                      )),
+                if (_newModel.useful == false && widget.isLoading == true) const SizedBox(width: 16, height: 16, child: CircularProgressIndicator.adaptive()),
               ],
             ),
           ],

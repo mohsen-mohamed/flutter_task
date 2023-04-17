@@ -11,14 +11,14 @@
 import 'package:auto_route/auto_route.dart' as _i8;
 import 'package:flutter/material.dart' as _i9;
 import 'package:flutter_task/core/utils/enums.dart' as _i10;
-import 'package:flutter_task/pages/home/home_page.dart' as _i7;
-import 'package:flutter_task/pages/nav_bar/nav_bar_page.dart' as _i1;
-import 'package:flutter_task/pages/place_holders/account_page.dart' as _i2;
-import 'package:flutter_task/pages/place_holders/receive_requests_page.dart'
-    as _i3;
-import 'package:flutter_task/pages/place_holders/work_orders_page.dart' as _i4;
-import 'package:flutter_task/pages/rating/rating_page.dart' as _i5;
-import 'package:flutter_task/pages/status/status_page.dart' as _i6;
+import 'package:flutter_task/views/home/home_page.dart' as _i1;
+import 'package:flutter_task/views/nav_bar/nav_bar_page.dart' as _i2;
+import 'package:flutter_task/views/place_holders/account_page.dart' as _i3;
+import 'package:flutter_task/views/place_holders/receive_requests_page.dart'
+    as _i4;
+import 'package:flutter_task/views/place_holders/work_orders_page.dart' as _i5;
+import 'package:flutter_task/views/rating/rating_page.dart' as _i6;
+import 'package:flutter_task/views/status/status_page.dart' as _i7;
 
 abstract class $AppRouter extends _i8.RootStackRouter {
   $AppRouter([_i9.GlobalKey<_i9.NavigatorState>? navigatorKey])
@@ -26,57 +26,71 @@ abstract class $AppRouter extends _i8.RootStackRouter {
 
   @override
   final Map<String, _i8.PageFactory> pagesMap = {
+    HomeRoute.name: (routeData) {
+      return _i8.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.HomePage(),
+      );
+    },
     NavBarRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.NavBarPage(),
+        child: const _i2.NavBarPage(),
       );
     },
     AccountRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.AccountPage(),
+        child: const _i3.AccountPage(),
       );
     },
     ReceiveRequestsRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ReceiveRequestsPage(),
+        child: const _i4.ReceiveRequestsPage(),
       );
     },
     WorkOrdersRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.WorkOrdersPage(),
+        child: const _i5.WorkOrdersPage(),
       );
     },
     RatingRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.RatingPage(),
+        child: const _i6.RatingPage(),
       );
     },
     StatusRoute.name: (routeData) {
       final args = routeData.argsAs<StatusRouteArgs>();
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i6.StatusPage(
+        child: _i7.StatusPage(
           status: args.status,
           key: args.key,
         ),
-      );
-    },
-    HomeRoute.name: (routeData) {
-      return _i8.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i7.HomePage(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.NavBarPage]
+/// [_i1.HomePage]
+class HomeRoute extends _i8.PageRouteInfo<void> {
+  const HomeRoute({List<_i8.PageRouteInfo>? children})
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRoute';
+
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.NavBarPage]
 class NavBarRoute extends _i8.PageRouteInfo<void> {
   const NavBarRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -90,7 +104,7 @@ class NavBarRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.AccountPage]
+/// [_i3.AccountPage]
 class AccountRoute extends _i8.PageRouteInfo<void> {
   const AccountRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -104,7 +118,7 @@ class AccountRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.ReceiveRequestsPage]
+/// [_i4.ReceiveRequestsPage]
 class ReceiveRequestsRoute extends _i8.PageRouteInfo<void> {
   const ReceiveRequestsRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -118,7 +132,7 @@ class ReceiveRequestsRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.WorkOrdersPage]
+/// [_i5.WorkOrdersPage]
 class WorkOrdersRoute extends _i8.PageRouteInfo<void> {
   const WorkOrdersRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -132,7 +146,7 @@ class WorkOrdersRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.RatingPage]
+/// [_i6.RatingPage]
 class RatingRoute extends _i8.PageRouteInfo<void> {
   const RatingRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -146,7 +160,7 @@ class RatingRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.StatusPage]
+/// [_i7.StatusPage]
 class StatusRoute extends _i8.PageRouteInfo<StatusRouteArgs> {
   StatusRoute({
     required _i10.OrderStatus status,
@@ -181,18 +195,4 @@ class StatusRouteArgs {
   String toString() {
     return 'StatusRouteArgs{status: $status, key: $key}';
   }
-}
-
-/// generated route for
-/// [_i7.HomePage]
-class HomeRoute extends _i8.PageRouteInfo<void> {
-  const HomeRoute({List<_i8.PageRouteInfo>? children})
-      : super(
-          HomeRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'HomeRoute';
-
-  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
